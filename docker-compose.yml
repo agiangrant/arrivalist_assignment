@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  postgres:
+    container_name: arrivalist_postgres
+    image: "postgres:alpine"
+    ports:
+      - "5432:5432"
+    volumes:
+      - arrivalist_pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: arrivalist_local
+      POSTGRES_PASSWORD: DccWQJVPNvtxmaZnyzJx9PPsrUJbckjy
+      POSTGRES_DB: arrivalist_local
+
+
+volumes:
+  arrivalist_pgdata:
